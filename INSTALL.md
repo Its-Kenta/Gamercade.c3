@@ -19,7 +19,7 @@
 
 ## Installation
 
-[**gamercade.c3**](https://github.com/Its-Kenta/gamercade/blob/main/src/gamercade.c3) needs to be dropped into your project and have it's module imported `import gamercade;`
+[**gamercade.c3**](https://github.com/Its-Kenta/Gamercade.c3/blob/main/gamercade.c3) needs to be dropped into your project and have it's module imported `import gamercade;`
 
 You can also view the template added to this repository to see how it's setup.
 
