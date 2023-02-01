@@ -1,0 +1,26 @@
+{
+  // language version of C3
+  "langrev": "1",
+  // warnings used for all targets
+  "warnings": [ "no-unused" ],
+  // directories where C3 library files may be found
+  "dependency-search-paths": [ "lib" ],
+  // libraries to use for all targets
+  "dependencies": [ ],
+  // author(s), optionally with email
+  "authors": [ "John Doe <john.doe@example.com>" ],
+  // Version using semantic versioning
+  "version": "0.1.0",
+  // sources compiled for all targets
+  "sources": [ "src/**" ],
+  "target" : "wasm32",
+  "nolibc" : true,
+  "no-entry" : true,
+  "link-args" : [ "-zstack-size=14752", "--initial-memory=65536", "--stack-first", "--max-memory=65536", "--allow-undefined"],
+  // Targets
+  "targets": {
+    "gamercade": {
+      "type": "executable"
+    }
+  }
+}
