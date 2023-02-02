@@ -16,7 +16,7 @@
   "target" : "wasm32",
   "nolibc" : true,
   "no-entry" : true,
-  "link-args" : ["--allow-undefined"],
+  "link-args" : [],
   // Targets
   "targets": {
     "gamercade": {
