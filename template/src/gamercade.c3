@@ -45,6 +45,8 @@ extern fn void sprite(int graphicsParameters, long transparencyMask, int x, int 
 // Text
 extern fn void console_log(char* text, usz len) @wasm;
 extern macro void consoleLog(String text) => console_log(text, text.len);
+extern fn void console_log_utf16(char* text, usz len) @wasm;
+extern macro void consoleLogUTF16(String text) => console_log_utf16(text, text.len);
 
 // Random
 extern fn void setSeed(int setSeed) @extern("set_seed") @wasm;
