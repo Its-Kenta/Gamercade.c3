@@ -33,7 +33,7 @@ Follow the [Gamercade Getting Started Guide](https://gamercade.io/docs/category/
 
 To embark on your journey to writing your first rom we need to learn few important bits about Gamercade for C3.
 
-Your main entry point `main.c3` does not require a `fn int main(String[] argv)` function as Gamercades `init()` becomes the main entry point within the console itself which we will talk about shortly. Another important information is that for now all *math functions* e.g. `cos`, `sine`, `cosine` and such, have to be called from the `std::math::nolibc` until more functions are adapted for WASM. In the example below you will see that we're importing `import std::math::nolibc::trig;` to use two functions.
+Your main entry point `main.c3` does not require a `fn int main(String[] argv)` function as Gamercades `init()` becomes the main entry point within the console itself.
 
 Your `main.c3` needs to hold three functions that are not part of the **Gamercade.c3** binding, those functions have to be written by yourself and they're:
 
@@ -171,7 +171,7 @@ Before we build our project we need to adjust `project.json` file with additiona
   "target" : "wasm32",
   "nolibc" : true,
   "no-entry" : true,
-  "link-args" : [ "-zstack-size=14752", "--initial-memory=65536", "--stack-first", "--max-memory=65536", "--allow-undefined"],
+  "link-args" : ["--allow-undefined"],
   // Targets
   "targets": {
     "gamercade": { // this field changes the name of the .wasm file.

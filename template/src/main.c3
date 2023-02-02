@@ -1,6 +1,6 @@
 module hello_world;
 import gamercade;
-import std::math::nolibc::trig;
+import std::math;
 
 usz frameCounter = 0;
 int xPos = 0;
@@ -64,8 +64,8 @@ fn void draw() @extern("draw") @wasm {
 
     // Make it spin around
     float frame = (float)(frameCounter);
-    float x = trig::_sinf(frame * 0.1) * 25.0;
-    float y = trig::_cosf(frame * 0.1) * 25.0;
+    float x = math::sin(frame * 0.1f) * 25.0f;
+    float y = math::cos(frame * 0.1f) * 25.0f;
 
     x += (float)(xPos);
     y += (float)(yPos);

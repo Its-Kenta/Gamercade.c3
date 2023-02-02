@@ -16,7 +16,7 @@
   "target" : "wasm32",
   "nolibc" : true,
   "no-entry" : true,
-  "link-args" : [ "-zstack-size=14752", "--initial-memory=65536", "--stack-first", "--max-memory=65536", "--allow-undefined"],
+  "link-args" : ["--allow-undefined"],
   // Targets
   "targets": {
     "gamercade": {
