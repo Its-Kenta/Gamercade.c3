@@ -20,8 +20,8 @@ extern fn int sprite_width(int sprite_sheet) @wasm;
 extern fn int sprite_count(int sprite_sheet) @wasm;
 extern fn int bgm_length_secs(int bgm_index) @wasm;
 extern fn int bgm_length_frames(int bgm_index) @wasm;
-extern fn int sfxLengthSecs(int sfx_index) @wasm;
-extern fn int sfxLengthFrames(int sfx_index) @wasm;
+extern fn int sfx_length_secs(int sfx_index) @wasm;
+extern fn int sfx_length_frames(int sfx_index) @wasm;
 
 
 // Graphics Params
