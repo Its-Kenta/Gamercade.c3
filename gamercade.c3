@@ -1,4 +1,4 @@
-module gamercade;
+module gamercade::gc;
 
 // Audio
 extern fn void play_bgm(int bgm_index) @wasm;
