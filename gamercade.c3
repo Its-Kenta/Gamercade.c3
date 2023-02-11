@@ -31,7 +31,7 @@ extern fn int spriteIndex(int spriteIndex) @extern("sprite_index");
 extern fn int colorIndex(int colorIndex) @extern("color_index");
 extern fn int flipX(int flipX) @extern("flip_x");
 extern fn int flipY(int flipY) @extern("flip_y");
-extern fn int graphicsParameters(int paletteIndex, int spriteSheetIndex, int spriteIndex, int colorIndex, int flipX, int flipY) @extname("graphics_parameters");
+extern fn int graphicsParameters(int paletteIndex, int spriteSheetIndex, int spriteIndex, int colorIndex, int flipX, int flipY) @extern("graphics_parameters");
 
 // Draw
 extern fn void clearScreen(int graphicsParameters) @extern("clear_screen");
@@ -43,7 +43,7 @@ extern fn void line(int graphicsParameters, int x0, int y0, int x1, int y1) @ext
 extern fn void sprite(int graphicsParameters, long transparencyMask, int x, int y) @extern("sprite");
 
 // Text
-extern fn void console_log(char* text, usz len);
+extern fn void console_log(char* text, usz len) @extern("console_log");
 macro void consoleLog(String text) => console_log(text, text.len);
 
 // Random
